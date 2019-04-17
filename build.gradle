@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+}
+
+dependencies {
+	
+	compile 'org.apache.kafka:kafka-clients:0.10.2.0'
+    compile 'ch.qos.logback:logback-classic:1.2.2'
+	compile group: 'com.h2database', name: 'h2', version: '1.4.199'
+    compile 'org.voltdb:voltdbclient:8.4.1'
+}
+
+repositories {
+    jcenter()
+}
+
+task clientJar(type: Jar) {
+		baseName = 'client'
+		from(sourceSets.main.output)
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	with jar
+}

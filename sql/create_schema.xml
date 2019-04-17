@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE database SYSTEM "http://db.apache.org/torque/dtd/database.dtd">
+
+<database name="sample">
+
+    <table name="order_item">
+        <column name="order_id" type="INTEGER" required="true" primaryKey="true" />
+        <column name="item_id" type="VARCHAR" required="true" size="8" />
+    </table>
+
+    <table name="order_price">
+        <column name="order_id" type="INTEGER" required="true" primaryKey="true" />
+        <column name="price" type="INTEGER" required="true" />
+    </table>
+</database>

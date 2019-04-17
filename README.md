@@ -1,6 +1,6 @@
 # Setting up replication from MySQL to VoltDB using SymmetricDS
 
-# Worked best when starting from the provided sample. Follow the Getting Started instructions on SymmetricDS's pages.
+### Worked best when starting from the provided sample. Follow the Getting Started instructions on SymmetricDS's pages.
 
 ## Setup MySQL
 * 
